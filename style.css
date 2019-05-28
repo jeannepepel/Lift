@@ -1,0 +1,55 @@
+body {
+    background-color: #f8c535;
+    color: black;
+  }
+
+.nav-link {
+    font-size: 22px;
+    color: #cdcdcd; 
+  }
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+.navbar-custom {
+    background-color: #FFFFFF;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.card-text {
+    font-size: 22px;
+  }
+
+.card-header {
+    background-color: #e4e2e2;
+    font-size: 25px;
+    color: #FFFFFF;
+  }
+
+.btn-danger {
+    background-color: #F05638;
+    font-size: 20px;
+    border:0;
+  }
+
+  .my-logo {
+      position:absolute;
+      left:-2.5%;
+      top:-50px;
+      border-radius:50%;
+  }
+
+  .toocan {
+    border-radius:50%;
+}
