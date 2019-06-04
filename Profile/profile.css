@@ -1,0 +1,184 @@
+
+/* Left bar */
+.sticky-top{
+    background-color: #FAF9F9;
+   height: 100%;
+   position: fixed;
+    
+}
+
+.yellow-bar{
+    background-color: #f8c535;
+    height: 200px;
+}
+
+.profile-picture  {
+  
+    padding-top: 50px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    
+}
+
+.profile-picture img{
+    border: 2px solid #455768; 
+}
+.info{
+    text-align: center;
+   
+    float: none;
+   margin-top: 55px; 
+
+}
+
+.progress-bar{
+    color: white;
+    background-color: green;
+    
+}
+
+.progress{
+    height: 30px;
+    margin-top: 20px;
+    background: #ddd;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.scale
+{
+    height: 1em; 
+    width: 1em;
+}
+
+.links{
+    margin: 50px 10px;
+}
+
+
+/* RIGHT SIDE  */
+
+.main header{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+
+/* NAVBAR */ 
+
+.nav-link {
+    font-size: 22px;
+    color: #cdcdcd;
+  }
+ 
+ /* mouse over link */
+ a:hover {
+    color: black;
+ }
+ 
+ .navbar-custom {
+    background-color: #FFFFFF;
+ }
+ 
+ .navbar-collapse {
+    display: flex;
+    justify-content: space-around;
+ }
+ 
+
+ /* RIGHT SIDE CONTENT */
+
+ .pre-heading{
+     font-size: 16px;
+     color: #D3D3D3; 
+ }
+
+ /* ABOUT */
+ #about .about{
+     font-size: 14px;
+     margin-top: 30px;
+     margin-bottom: 30px;
+     color: #D3D3D3;
+     text-align: left;
+
+ }
+ 
+ #about h5{
+     text-align: left;
+
+ }
+
+ .grey-line{
+    width: 100%; 
+    height: 1px;
+    margin: 0 auto;
+   margin-bottom: 30px;
+     background-color:#BDBDBD;
+    
+ }
+
+ /* SKILLS and CAUSES*/ 
+
+ #skills h5{
+     color: #EB5437;
+     text-align: left;
+     font-size: 16px; 
+ }
+
+ #causes h5{
+    color: #EB5437;
+    text-align: left;
+    font-size: 16px; 
+    margin-top: 20px;
+}
+ 
+ .red-line{
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: #EB5437;
+
+    float: left;
+ }
+
+ .skill-tag{
+     font-size: 12px;
+     background-color: #ECECEC;
+     color: gray;
+     display: inline-block;
+     border-radius: 5px;
+     justify-content: space-around;
+     padding: 5px;
+     margin: 5px 1px;
+ }
+
+ .see{
+     font-size: 14px;
+     background-color: #EB5437;
+     color: white;
+     border-radius: 10px;
+     text-align: center;
+     margin: 30px auto;
+     padding: 5px; 
+ }
+
+ /* PROJECTS */
+
+
+ #projects .about{
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #D3D3D3;
+    text-align: left;
+ }
+
+#projects h5{
+    text-align: left;
+}
