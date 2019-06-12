@@ -1,0 +1,12 @@
+body {
+    background-color: #f8c535;
+    color: black;
+  }
+
+.img {
+    vertical-align: bottom;
+  }
+
+  .btn-danger {
+    background-color: #F05638;
+  }

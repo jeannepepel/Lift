@@ -19,7 +19,8 @@ a:hover {
 
 .navbar-collapse {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    margin-right: 15px;
 }
 
 .main {
