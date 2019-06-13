@@ -35,7 +35,17 @@ MongoClient.connect(uri, function(err, client) {
 app.get("/Feed/", (req, res)=>res.render("index",{style:'style.css'}));
   app.use("/Feed/",express.static("Feed"));
 
-//                                     PT1 of Assoce profile
+// APPLY
+app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
+  app.use("/Apply/",express.static("Apply"));
+
+
+
+//  PROFILE
+app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.css'}));
+  app.use("/Profile/",express.static("Profile"));
+
+//               "I'm an organization" >  PT1 of Assoce profile
 
 // GET Signup page
 app.get("/Assoces/SignUp/", (req, res)=>res.render("signupPt1"));
