@@ -32,8 +32,8 @@ MongoClient.connect(uri, function(err, client) {
 
 
 // FEED
-app.get("/Feed/", (req, res)=>res.render("index"));
-app.use("/Feed/",express.static("Feed"));
+app.get("/Feed/", (req, res)=>res.render("index",{style:'style.css'}));
+  app.use("/Feed/",express.static("Feed"));
 
 //                                     PT1 of Assoce profile
 
