@@ -1,8 +1,41 @@
-<div class="container">
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Dashboard_lift(test commit)</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Signup/signup.css">
+
+        <!-- JavaScript-->
+        <script src="script.js" async></script>
+    </head>
+    
+    <body>
+
+        <header style="margin-bottom: 80px">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-custom scrolling-navbar">
+            <a class="navbar-brand" href="#"><img alt="Brand" src="/Feed/Logo rouge.png" height="62" width="62"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">#</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+        <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-6">
             <form action="/Add-Assoce/" method="POST">
-                <div class="form-group">
+                <div class="form-group mt-5">
                     <label for="FirstName">First Name</label>
                     <input type="text" class="form-control" id="FirstName" name="FirstName" aria-describedby="FirstnameHelp" placeholder="Marcel">
                 </div>
@@ -31,8 +64,12 @@
         
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-danger">Submit</button>
             </form>
+        </div>
+        <div class="col-6">      
+          <div class="ngo" style="margin-top: 65px; margin-left: 130px"><img alt="ngo" src="/Signup/organization.png" style="height: 400px"></div>
         </div>
     </div>
 </div>
+</body>
