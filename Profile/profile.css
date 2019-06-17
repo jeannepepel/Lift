@@ -199,3 +199,8 @@
     text-align: left;
     margin-left: 30px;
 }
+
+.btn-danger {
+    background-color: #F05638;
+    border: 0;
+  }

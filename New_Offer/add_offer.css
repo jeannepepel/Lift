@@ -1,0 +1,33 @@
+body {
+    background-color: #f8c535;
+    color: black;
+  }
+
+.img {
+    vertical-align: bottom;
+  }
+
+  .btn-danger {
+    background-color: #F05638;
+    border: 0;
+  }
+
+  .nav-link {
+    font-size: 22px;
+    color: #cdcdcd; 
+  }
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+.navbar-custom {
+    background-color: #FFFFFF;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
