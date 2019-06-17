@@ -87,6 +87,10 @@ app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.c
 app.get("/About-Us/", (req, res)=>res.render("about"));
   app.use("/About/",express.static("About"));
 
+//  CONTACT US
+app.get("/Contact-Us/", (req, res)=>res.render("contactus"));
+  app.use("/Contact/",express.static("Contact"));
+
 //               "I'm an organization" >  PT1 of Assoce profile
 
 // GET Signup page

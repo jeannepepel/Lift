@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AddingOffer</title>
+    <title>Apply Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -39,18 +39,20 @@
 
     <div class="row">
         <div class="col-6">
-            <form action="/Add-Offer/" method="POST">
+            <form action="/Add-Offer/"  method="POST" enctype="multipart/form-data">
                 <div class="form-group ml-5">
                     <label for="Organization">The name of your project or organization</label>
                     <input type="text" class="form-control" id="Organization" name="Organization" placeholder="La Croix Rouge">
                 </div>
                 <div class="form-group ml-5">
-                <label for="inputGroupFileAddon01">Your logo</label>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile01"
-                    aria-describedby="inputGroupFileAddon01">
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    <label for="inputGroupFileAddon01">Your logo</label>
+                    <div class="custom-file">
+                    <input type="file" name="profilepic" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01" accept="image/*">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
+                    <label for="exampleFormControlTextarea1">Description and needs</label>
+                    <input type="text" class="form-control" id="FormControlTextarea1" name="Offer_Description" rows="8" placeholder="Motivation needed !">
                 </div>
                 <div class="form-group ml-5">
                     <label for="Email">Your email adress</label>
@@ -65,7 +67,7 @@
  </div>
 
  <div class="col-6">
-     <div class="team" style="margin-top: 60px; margin-left: 140px"><img alt="team" src="/NewOffer/team.png" style="height: 400px"></div>
+     <div class="team" style="margin-top: 30px; margin-left: 140px"><img alt="team" src="/NewOffer/team.png" style="height: 400px"></div>
  </div>
     </div>       
 </body>
