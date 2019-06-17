@@ -75,12 +75,9 @@ app.get("/Feed/", (req, res)=>{
   });
   app.use("/Feed/",express.static("Feed"));
 
-
 // APPLY
 app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
   app.use("/Apply/",express.static("Apply"));
-
-
 
 //  PROFILE
 app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.css'}));
