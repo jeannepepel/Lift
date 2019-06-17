@@ -3,12 +3,12 @@ const exphbs  = require('express-handlebars');
 const multer  = require('multer');
 const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
-
+/*
 const cookieParser = require('cookie-parser');
 const session = require('express-session')
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
-
+*/
 // Mongo const
 const uri = "mongodb+srv://lift:liftiscool@cluster0-4vzbn.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
@@ -54,9 +54,34 @@ client.connect(err => {
 //credentials   lift / liftiscool
 
 
-// FEED
+/* FEED
 app.get("/Feed/", (req, res)=>res.render("index",{style:'style.css'}));
   app.use("/Feed/",express.static("Feed"));
+*/
+
+// FEEDv2
+
+
+app.get("/Feed/", (req, res)=>{
+  
+  client.connect(err => {
+    const collection = client.db("Lift").collection("Offers");
+    collection.find( { },function(err,cursor){
+      cursor.toArray(callback);
+      ).toArray(function (err, result) {
+      result = result.map(item => {
+        if (item._id == update) {
+          item.update = true;
+        } else {
+          item.update = false;
+        }
+        return item;
+      });
+      res.render("index.hbs", { result, search });
+    });
+  });
+  app.use("/Feed/",express.static("Feed"));
+});
 
 // APPLY
 app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
@@ -72,6 +97,7 @@ app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.c
 
 // GET Signup page
 app.get("/Assoces/SignUp/", (req, res)=>res.render("signupPt1"));
+  app.use("/Signup/",express.static("Signup"));
 
 // POST new Assoce profile PT1
 app.post("/Add-Assoce/", (req, res) => {
@@ -119,9 +145,10 @@ app.post("/Add-Assoce/", (req, res) => {
 //                                     NEW OFFER
 
 // GET Add-offer page
-app.get("/New-Offer/", (req, res)=>res.render("add_offer"));
+app.get("/New-Offer/", (req, res)=>res.render("addoffer",{style:'/NewOffer/addoffer.css'}));
+  app.use("/NewOffer/",express.static("NewOffer")); 
 
-// Post new offer
+  // Post new offer
 app.post("/Add-Offer/", (req, res) => {
   let Assoce = req.body.Organization;
   let Email = req.body.Email;
