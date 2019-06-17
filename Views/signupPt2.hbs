@@ -1,63 +1,97 @@
-<div class="container">
-    <h1>Be part of the Lift community! </h1>
+<!doctype html>
+<html lang="en">
 
-    <div class="row">
-        <div class="col">
-            <form action="/Post-Profile/" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="profilepic">Profile Picture</label>
-                    <input type="file" class="form-control" id="profilepic" name="profilepic">
-                </div>
-                
-                <div class="form-group">
-                    <label for="Nationality">Nationality</label>
-                    <input type="text" class="form-control" id="nationality" name="nationality">
-                </div>
+    <head>
+        <title>Dashboard_lift(test commit)</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-                <div class="form-group">
-                    <label for="Languages">Languages</label>
-                    <input type="text" class="form-control" id="language" name="language" >
-        
-                </div>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Signup/signup.css">
 
-                <div class="form-group">
-                    <label for="activity">Field of activity</label>
-                    <input type="text" class="form-control" id="activity" name="activity" >
-        
-                </div>
+        <!-- JavaScript-->
+        <script src="script.js" async></script>
+    </head>
+    
+    <body>
 
-                <div class="form-group">
-                    <label for="Ciesize">Size of the company</label>
-                    <input type="text" class="form-control" id="size" name="size" >
-        
-                </div>
+        <header style="margin-bottom: 80px">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-custom scrolling-navbar">
+            <a class="navbar-brand" href="#"><img alt="Brand" src="/Feed/Logo rouge.png" height="62" width="62"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">#</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" name="location" >
-        
-                </div>
 
-                <div class="form-group">
-                    <label for="causes">Causes</label>
-                    <input type="text" class="form-control" id="causes" name="causes" >
-        
-                </div>
+    <div class="container">
+        <h1>Be part of the Lift community! </h1>
 
-                <div class="form-group">
-                    <label for="about">About the company</label>
-                    <input type="text" class="form-control" id="about" name="about" >
-        
-                </div>
+        <div class="row">
+            <div class="col">
+                <form action="/Post-Profile/" method="POST" <!--enctype="multipart/form-data"--> >
+                    <div class="form-group">
+                        <label for="profilepic">Profile Picture</label>
+                        <input type="file" class="form-control" id="profilepic" name="profilepic">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Nationality">Nationality</label>
+                        <input type="text" class="form-control" id="nationality" name="nationality">
+                    </div>
 
-                <div class="form-group">
-                    <label for="website">Website</label>
-                    <input type="text" class="form-control" id="website" name="website">
-        
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Continue</button>
-            </form>
+                    <div class="form-group">
+                        <label for="Languages">Languages</label>
+                        <input type="text" class="form-control" id="language" name="language" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activity">Field of activity</label>
+                        <input type="text" class="form-control" id="activity" name="activity" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Ciesize">Size of the company</label>
+                        <input type="text" class="form-control" id="size" name="size" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" name="location" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="causes">Causes</label>
+                        <input type="text" class="form-control" id="causes" name="causes" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="about">About the company</label>
+                        <input type="text" class="form-control" id="about" name="about" >
+            
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="text" class="form-control" id="website" name="website">
+            
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>

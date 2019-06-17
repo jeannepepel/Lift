@@ -28,6 +28,24 @@ MongoClient.connect(uri, function(err, client) {
   client.close();
 });
 
+/*
+// Create indexes in MongoDB
+client.connect(err => {
+  const collection = client.db("Lift").collection("Assoces");
+  collection.createIndexes([
+    {name:"profilepic",key:{profilepic:1}},
+    {name:"nationality" ,key:{nationality:1}},
+    {name:"language" ,key:{language:1}},
+    {name:"activity" ,key:{activity:1}},
+    {name:"size" ,key:{size:1}},
+    {name:"location" ,key:{location:1}},
+    {name:"causes" ,key:{causes:1}},
+    {name:"about",key:{about:1}},
+    {name:"website",key:{website:1}}
+  ]);
+})
+*/
+
 //credentials   lift / liftiscool
 
 
@@ -73,17 +91,33 @@ app.get("/Assoces/SignUp2/", (req, res)=>res.render("signupPt2"));
 
 // POST new Assoce profile PT2
 app.post("/Post-Profile/", (req, res) => {
-  let Assoce = req.body.Company;
-  let Email = req.body.Email;
-  let Password = req.body.Password;
-  let lastname = req.body.LastName;
-  let firstname = req.body.FirstName;
+  let profilepic = req.body.profilepic;
+  let nationality = req.body.nationality;
+  let language = req.body.language;
+  let activity = req.body.activity;
+  let size = req.body.size;
+  let location = req.body.location;
+  let causes = req.body.causes;
+  let about = req.body.about;
+  let website = req.body.website;
 
   upload.single('profilepic')
 
   client.connect(err => {
     const collection = client.db("Lift").collection("Assoces");
-    collection.insertOne({ Assoce_1: Assoce, Email_1: Email, Password_1: Password, First_Name_1: firstname, Last_Name_1:lastname }, function (err, obj) {
+    collection.insertOne(
+      { 
+      profilepic: profilepic , 
+      nationality: nationality, 
+      language: language,
+      activity: activity,
+      size: size,
+      location: location,
+      causes: causes,
+      about: about,
+      website: website
+     }, 
+      function (err, obj) {
       res.redirect("/Feed/");
     });
   });
