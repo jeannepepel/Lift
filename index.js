@@ -54,15 +54,14 @@ client.connect(err => {
 //credentials   lift / liftiscool
 
 
-/* FEED
+// FEED
 app.get("/Feed/", (req, res)=>res.render("index",{style:'style.css'}));
   app.use("/Feed/",express.static("Feed"));
-*/
 
 // FEEDv2
 
 
-app.get("/Feed/", (req, res)=>{
+/*app.get("/Feed/", (req, res)=>{
   
   client.connect(err => {
     const collection = client.db("Lift").collection("Offers");
@@ -81,13 +80,11 @@ app.get("/Feed/", (req, res)=>{
     });
   });
   app.use("/Feed/",express.static("Feed"));
-});
+});*/
 
 // APPLY
 app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
   app.use("/Apply/",express.static("Apply"));
-
-
 
 //  PROFILE
 app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.css'}));
