@@ -1,60 +1,14 @@
 @import url(font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
-/*
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
-/* Reset */
-
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
-
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
-
-	body {
-		line-height: 1;
-	}
-
-	ol, ul {
-		list-style: none;
-	}
-
-	blockquote, q {
-		quotes: none;
-	}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-
-	body {
-		-webkit-text-size-adjust: none;
-	}
-
-/* Box Model */
+/* Box Model 
 
 	*, *:before, *:after {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-	}
+	}*/
 
 /* Containers */
 
@@ -1571,7 +1525,7 @@
 		padding-top: 6em;
 	}
 
-		body.landing {
+		body.about {
 			padding-top: 0 !important;
 		}
 
@@ -1583,7 +1537,7 @@
 
 		}
 
-		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+		/*body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -1591,7 +1545,7 @@
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
-			transition: none !important;
+			transition: none !important;*/
 		}
 
 /* Type */
@@ -1649,7 +1603,6 @@
 		}
 
 	a {
-		text-decoration: underline;
 		color: #f32853;
 	}
 
@@ -2736,7 +2689,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("images/overlay.png"), url("../../images/5660576391_essay-community-service.jpg");
+			background-image: url("images/overlay.png"), url("/About/images/5660576391_essay-community-service.jpg");
 			background-position: center center;
 			background-size: cover;
 		}
@@ -3091,7 +3044,7 @@
 	#banner {
 		padding: 16em 0 13em 0;
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../../images/13.-PROGRAMA-DE-INMERSION-EN-FAMILIA-Y-COMMUNITY-SERVICE-EN-EEUU.jpg");
+		background-image: url("images/overlay.png"), url("/About/images/13.-PROGRAMA-DE-INMERSION-EN-FAMILIA-Y-COMMUNITY-SERVICE-EN-EEUU.jpg");
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
