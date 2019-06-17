@@ -25,9 +25,3 @@ a:hover {
 .navbar-custom {
     background-color: #FFFFFF;
 }
-
-.navbar-collapse {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-}
