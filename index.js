@@ -53,8 +53,8 @@ client.connect(err => {
 
 //credentials   lift / liftiscool
 
-
-/* FEED
+/*
+// FEED
 app.get("/Feed/", (req, res)=>res.render("index",{style:'style.css'}));
   app.use("/Feed/",express.static("Feed"));
 */
@@ -66,22 +66,15 @@ app.get("/Feed/", (req, res)=>{
   
   client.connect(err => {
     const collection = client.db("Lift").collection("Offers");
-    collection.find( { },function(err,cursor){
-      cursor.toArray(callback);
-      ).toArray(function (err, result) {
-      result = result.map(item => {
-        if (item._id == update) {
-          item.update = true;
-        } else {
-          item.update = false;
-        }
-        return item;
-      });
-      res.render("index.hbs", { result, search });
+    collection.find().toArray(function(err, result){
+      if (err) throw err;
+      res.render("index",{result});
+    });
+ 
     });
   });
   app.use("/Feed/",express.static("Feed"));
-});
+
 
 // APPLY
 app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
