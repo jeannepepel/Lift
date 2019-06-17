@@ -15,7 +15,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 
 // Espress + multer for file upload + handlebars const
 const app = express();
-const upload = multer({ dest: 'uploads/' }); 
+const upload = multer({ dest: './uploads/' }); 
 app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
 app.set('view engine', 'hbs');
 app.use(express.urlencoded());
@@ -143,11 +143,11 @@ app.get("/New-Offer/", (req, res)=>res.render("addoffer",{style:'/NewOffer/addof
   app.use("/NewOffer/",express.static("NewOffer")); 
 
   // Post new offer
-app.post("/Add-Offer/", (req, res) => {
+app.post("/Add-Offer/", upload.single('profilepic') , (req, res) => {
   let Assoce = req.body.Organization;
   let Email = req.body.Email;
   let profilepic = req.body.profilepic;
-  let description=req.body.Offer_Description
+  let description=req.body.Offer_Description;
 
   client.connect(err => {
     const collection = client.db("Lift").collection("Offers");
@@ -165,48 +165,9 @@ app.post("/Add-Offer/", (req, res) => {
   });
 });
 
-/*
-//                                     PT2 of Assoce profile
-
-// GET Signup page PT2
-app.get("/Assoces/SignUp2/", (req, res)=>res.render("signupPt2"));
 
 
-// POST new Assoce profile PT2
-app.post("/Post-Profile/", (req, res) => {
-  let profilepic = req.body.profilepic;
-  let nationality = req.body.nationality;
-  let language = req.body.language;
-  let activity = req.body.activity;
-  let size = req.body.size;
-  let location = req.body.location;
-  let causes = req.body.causes;
-  let about = req.body.about;
-  let website = req.body.website;
 
-  upload.single('profilepic')
-
-  client.connect(err => {
-    const collection = client.db("Lift").collection("Assoces");
-    collection.insertOne(
-      { 
-      profilepic: profilepic , 
-      nationality: nationality, 
-      language: language,
-      activity: activity,
-      size: size,
-      location: location,
-      causes: causes,
-      about: about,
-      website: website
-     }, 
-      function (err, obj) {
-      res.redirect("/Feed/");
-    });
-  });
-
-});
-*/
 
 /*
 //                          USER SESSIONS          (What's the use ???)
@@ -226,89 +187,21 @@ app.use(session({
 */
 
 
-// Pas besoin de liste des Assoce, à transformer pour avoir une liste des OFFRES
-app.get("/Offers/", (req, res) => {
-  let search = req.query.search;
-  let update = req.query.update;
 
-  client.connect(err => {
-    const collection = client.db("Lift").collection("Assoces");
-    collection.find(search ? { name: { '$regex': search, '$options': 'i' } } : {}).toArray(function (err, result) {
-      result = result.map(item => {
-        if (item._id == update) {
-          item.update = true;
-        } else {
-          item.update = false;
-        }
-        return item;
-      });
-      res.render("Assoces", { result, search });
-    });
-  });
-});
-
-
-app.post("/AssoceDelete/:id", (req, res) => {
-  let id = req.params.id;
-
-  client.connect(err => {
-    const collection = client.db("sLift").collection("Assoces");
-    collection.deleteOne({ _id: new mongodb.ObjectId(id) }, function (err, obj) {
-      res.redirect("/Assoces/SignUp/");
-    });
-  });
-});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
-/*
-
-app.get("/students/", (req, res) => {
-  let search = req.query.search;
-  let update = req.query.update;
-
-  client.connect(err => {
-    const collection = client.db("school").collection("students");
-    collection.find(search ? { name: { '$regex': search, '$options': 'i' } } : {}).toArray(function (err, result) {
-      result = result.map(item => {
-        if (item._id == update) {
-          item.update = true;
-        } else {
-          item.update = false;
-        }
-        return item;
-      });
-      res.render("students", { result, search });
-    });
-  });
-});
 
 
-
-
-
-app.post("/studentsave/:id", (req, res) => {
-  let id = req.params.id;
-  let studentname = req.body.studentname;
-  let studentbid = req.body.studentbid;
-  let choice = req.body.choice;
-
-  if (choice == "OK") {
-    client.connect(err => {
-      const collection = client.db("school").collection("students");
-      collection.updateOne({ _id: new mongodb.ObjectId(id) },
-        { $set: { name: studentname, BID: studentbid } }, function (err, obj) {
-          res.redirect("/students/");
-        });
-    });
-  } else {
-    res.redirect("/students/");
-  }
-});
-
-app.post("/studentupdate/:id", (req, res) => {
-  res.redirect("/students/?update=" + req.params.id);
-});
+/*               COMMENTS ON THE PROJECT
+Left to do :
+1- sessions
+2- Login
+3- Assoce-specific backend
+4- Interactions between the student and the Assoce, implies a student account
+5- modify offer / make it go online / offline
+6- modify profile
+7- pictures upload to MongoDB + serve picture from mongo to the site
 
 */
