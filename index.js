@@ -83,6 +83,10 @@ app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
 app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.css'}));
   app.use("/Profile/",express.static("Profile"));
 
+//  ABOUT US
+app.get("/About-Us/", (req, res)=>res.render("about"));
+  app.use("/About/",express.static("About"));
+
 //               "I'm an organization" >  PT1 of Assoce profile
 
 // GET Signup page
