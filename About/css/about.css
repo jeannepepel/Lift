@@ -2,13 +2,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
 
-/* Box Model 
+/* Box Model*/
 
 	*, *:before, *:after {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-	}*/
+	}
 
 /* Containers */
 
@@ -3221,22 +3221,29 @@
 
 		}
 
-	/* My additions */
+/* My additions */
 
-		.nav-link {
-			font-size: 22px;
-			color: #cdcdcd; 
-		}
+.nav-link {
+	font-size: 22px;
+	color: #cdcdcd; 
+	}
 		 
-		  /* mouse over link */
+/* mouse over link */
 		
-		  .nav-link:hover {
-			   color: black;
-		}
+.nav-link:hover {
+	color: black;
+	}
 
-		.navbar-custom {
-			background-color: #FFFFFF;
-		}
-		.wrapper.style1 header.major p {
-			color: #cdcdcd;
-		}
+.navbar-custom {
+	background-color: #FFFFFF;
+	}
+
+.wrapper.style1 header.major p {
+	color: #cdcdcd;
+	}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+	}
