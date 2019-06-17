@@ -36,17 +36,14 @@ MongoClient.connect(uri, function(err, client) {
 /*
 // Create indexes in MongoDB
 client.connect(err => {
-  const collection = client.db("Lift").collection("Assoces");
+  const collection = client.db("Lift").collection("Applicants");
   collection.createIndexes([
-    {name:"profilepic",key:{profilepic:1}},
-    {name:"nationality" ,key:{nationality:1}},
-    {name:"language" ,key:{language:1}},
-    {name:"activity" ,key:{activity:1}},
-    {name:"size" ,key:{size:1}},
-    {name:"location" ,key:{location:1}},
-    {name:"causes" ,key:{causes:1}},
-    {name:"about",key:{about:1}},
-    {name:"website",key:{website:1}}
+    {name:"name",key:{name:1}},
+    {name:"surname" ,key:{surname:1}},
+    {name:"email" ,key:{email:1}},
+    {name:"motivation" ,key:{motivation:1}},
+    {name:"resume" ,key:{resume:1}},
+    {name:"docs" ,key:{docs:1}},
   ]);
 })
 */
@@ -78,6 +75,34 @@ app.get("/Feed/", (req, res)=>{
 // APPLY
 app.get("/Apply/", (req, res)=>res.render("apply",{style:'/Apply/apply.css'}));
   app.use("/Apply/",express.static("Apply"));
+
+//
+app.post("/Application/", (req, res) => {
+  let name = req.body.name;
+  let email = req.body.email;
+  let surname = req.body.surname;
+  let motivation = req.body.motivation;
+  let resume = req.body.resume;
+  let docs = req.body.docs;
+
+
+  client.connect(err => {
+    const collection = client.db("Lift").collection("Applicants");
+    collection.insertOne(
+      { name: name,
+        email: email,
+        surname: surname,
+        motivation: motivation,
+        resume: resume , 
+        docs: docs
+      },
+      function (err, obj) {
+      // rediriger vers publish an offer
+        res.redirect("/Feed/");
+      }
+    );
+  });
+});
 
 //  PROFILE
 app.get("/Profile/", (req, res)=>res.render("profile",{style:'/Profile/profile.css'}));

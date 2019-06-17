@@ -19,57 +19,66 @@
 
 
 <body>
-     <form>
-        <div class="row">
-        <div class="col-6">
-    <div class="form-group mt-5 ml-5">
-      <label for="exampleInputName1">Your name</label>
-      <input type="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Marcel">
-    </div>
-    <div class="form-group ml-5">
-      <label for="exampleInputSurname1">Your surname</label>
-      <input type="surname" class="form-control" id="exampleInputSurname1" placeholder="De Guérande">
-    </div>
-    <div class="form-group ml-5">
-            <label for="exampleInputEmail1">Your email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="marcel@deguerande.com">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else but need it to give you an answer.</small>
-          </div>
-          <div class="form-group ml-5">
-            <label for="exampleFormControlTextarea1">Show your motivation</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Never salty :p"></textarea>
-          </div>
-          <div class="form-group ml-5">
-                <label for="inputGroupFileAddon01">Upload your resume</label>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile01"
-                    aria-describedby="inputGroupFileAddon01">
-                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                </div>
-              </div>
-              <div class="form-group ml-5">
-                    <label for="inputGroupFileAddon02">Any other useful document ?</label>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile02"
-                        aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                  </div>
-    <div class="form-check ml-5 mr-5 mb-1">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">All my information is correct</label>
-    </div>
-    <div class="row">
-    <div class="col-2 mb-5">
-    <button type="submit" class="btn btn-danger ml-5">Submit</button>
-    </div>
-    <div class="col-10 mb-5"><a href="/Feed/" type="goBack" class="btn btn-danger ml-2">Go back</a></div>
-    </div>
-</div>
-  </form>
-  <div class="col-6">      
-          <div class="volunteer m-5"><img alt="volunteer" src="/Apply/volunteer.png"></div>
+  <div class="row">
+    <div class="col-6">
+      <form action="/Application/"  method="POST" enctype="multipart/form-data">
+
+        <div class="form-group mt-5 ml-5">
+          <label for="exampleInputName1">Your name</label>
+          <input type="text" class="form-control" name="name" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Marcel">
         </div>
-  </div>
+      
+        <div class="form-group ml-5">
+          <label for="exampleInputSurname1">Your surname</label>
+          <input type="text" name="surname" class="form-control" id="exampleInputSurname1" placeholder="De Guérande">
+        </div>
+      
+        <div class="form-group ml-5">
+          <label for="exampleInputEmail1">Your email</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="marcel@deguerande.com">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else but need it to give you an answer.</small>
+        </div>
+            
+        <div class="form-group ml-5">
+          <label for="exampleFormControlTextarea1">Show your motivation</label>
+          <textarea type="text" class="form-control" name="motivation" id="exampleFormControlTextarea1" rows="3" placeholder="Never salty :p"></textarea>
+        </div>
+        
+        <div class="form-group ml-5">
+          <label for="inputGroupFileAddon01">Upload your resume</label>
+          
+          <div class="custom-file">
+            <input type="file" name="resume" class="custom-file-input" id="inputGroupFile01"
+              aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+        
+        <div class="form-group ml-5">
+          <label for="inputGroupFileAddon02">Any other useful document ?</label>
+          <div class="custom-file">
+            <input type="file" name="docs" class="custom-file-input" id="inputGroupFile02"
+              aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+        
+      <div class="form-check ml-5 mr-5 mb-1">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">All my information is correct</label>
+      </div>
+      <div class="row">
+      <div class="col-2 mb-5">
+      <button type="submit" class="btn btn-danger ml-5">Submit</button>
+      </div>
+      <div class="col-10 mb-5"><a href="/Feed/" type="goBack" class="btn btn-danger ml-2">Go back</a></div>
+      </div>
+      
+    </form>
+    </div>
+    <div class="col-6">      
+            <div class="volunteer m-5"><img alt="volunteer" src="/Apply/volunteer.png"></div>
+          </div>
+    </div>
 </div>
 </body>
