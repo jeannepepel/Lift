@@ -225,7 +225,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 /*               COMMENTS ON THE PROJECT
 Left to do :
-1- sessions
+1- sessions + "interactions" DB with all what user does
 2- Login
 3- Assoce-specific backend
 4- Interactions between the student and the Assoce, implies a student account
