@@ -227,10 +227,12 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 Left to do :
 1- sessions + "interactions" DB with all what user does
 2- Login
+2,5 - réorganisation des dossiers ?
 3- Assoce-specific backend
 4- Interactions between the student and the Assoce, implies a student account
 5- modify offer / make it go online / offline
 6- modify profile
 7- pictures upload to MongoDB + serve picture from mongo to the site
+    >> Ne pas essayer 
 
 */
