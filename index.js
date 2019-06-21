@@ -20,7 +20,7 @@ app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
 app.set('view engine', 'hbs');
 app.use(express.urlencoded());
 
-const port = 70;
+const port = 7000;
 
 // checks connection to Mongo
 MongoClient.connect(uri, function(err, client) {
