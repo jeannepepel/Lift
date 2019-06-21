@@ -16,9 +16,11 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 // Espress + multer for file upload + handlebars const
 const app = express();
 const upload = multer({ dest: './uploads/' }); 
-app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
+app.engine('hbs', exphbs({ defaultLayout: 'main.hbs' }));
+app.set('views', './views');
 app.set('view engine', 'hbs');
 app.use(express.urlencoded());
+app.use(express.static("static"));
 
 const port = 7000;
 
